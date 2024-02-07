@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        header{ 
+            font-size: xx-large;
+            text-align: center;
+            margin-top: 2in;
+            margin-bottom: 1in;
+            background-color: aqua;
+        }
+        body {
+background-color: beige;
+font-size: large;
+font-style: normal;
+}
+h1{
+    font-size: large;
+}
+
+
+        
+    </style>
+<title>Contact Us Form</title>
+</head>
+<header>Contact Us</header>
+<button><a href="index.html">Home Page</a></button><br>
+<br>
+<br>
+
+<body>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="daca7b58-9289-4b45-bb24-7038df82b73a">   
+            
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+
+<h1>    
+<label for="message">Message:</label>
+<textarea id="message" name="message" required></textarea>
+<input type="hidden" name="redirect" value="https://web3forms.com/success">
+<button type="submit">Send</button>
+
+</h1>
+    </form>
+    
+
+</body>
+</html>
