@@ -1,0 +1,30 @@
+header{
+    font-size: xx-large;
+    text-align: center;
+
+
+
+}
+
+.image-style {
+    border: 2px solid grey;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+align-items: center;
+    float: row;
+    display: inline-block;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    header {
+        background-color: grey;
+        color: whitesmoke;
+    }
+   body {
+    background-color:black
+    color:bisque
+   }
+   .image-style{
+    display: inline-block;
+   }
+}
