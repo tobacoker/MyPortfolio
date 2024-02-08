@@ -18,7 +18,6 @@ align-items: center;
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     header {
         background-color: grey;
-        color: whitesmoke;
     }
    body {
     background-color:black
