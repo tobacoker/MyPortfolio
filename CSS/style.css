@@ -71,3 +71,10 @@ h2{
 a {
     color: hotpink;
   }
+
+
+  @media screen (max-width: 992px) {
+   body {
+    background-color: blue;
+   } 
+  }
