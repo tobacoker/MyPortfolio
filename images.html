@@ -6,22 +6,80 @@
     <title>photogallery</title>
     <link rel="icon" type="image/png" href="images/chaos.png">
     <link rel="stylesheet" type="text/css" href="images.css">
-    <body background="images/_DSC0073.JPG"></body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("images/_DSC0073.JPG");
+            background-size: cover;
+        }
+
+        header {
+            text-align: center;
+            font-size: 36px;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .links header {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button {
+            color: rgb(162, 144, 144);
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: darkgrey;
+            transform: scale(1, 1);
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image-style {
+            margin: 10px;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .image-style:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <header>Gallery</header><br>
-    <header><a href="index.html">Home</a></header> 
-    <header><a href="html-bio-with-css.html">Bio Page</a></header>
-<h1>
-    <img src="images/IMG_3652.jpeg" alt="images" width="350" height="400" class="image-style">
-    <img src="images/image3.JPG" alt="images" width="400" height="350" class="image-style">
-    <img src="images/Freedom.png" alt="images" width="480" height="360" class="image-style">
-    <img src="images/chaos.png" alt="images" width="350" height="400" class="image-style">
-    <img src="images/_DSC4015.JPG" alt="images" width="550" height="500" class="image-style">
-    <img src="images/_DSC0073.JPG" alt="images" width="450" height="300" class="image-style">
-    <img src="images/_DSC0070.JPG" alt="images" width="450" height="300" class="image-style">
-    <img src="images/_DSC0032.JPG" alt="images" width="450" height="400" class="image-style">
-</h1> 
-
+    <div class="links">
+        <button><header><a href="index.html">Home</a></header></button> 
+        <button><header><a href="html-bio-with-css.html">Bio Page</a></header></button>
+    </div>
+    <div class="image-container">
+        <img src="images/IMG_3652.jpeg" alt="images" width="350" height="400" class="image-style">
+        <img src="images/image3.JPG" alt="images" width="400" height="350" class="image-style">
+        <img src="images/Freedom.png" alt="images" width="480" height="360" class="image-style">
+        <img src="images/chaos.png" alt="images" width="350" height="400" class="image-style">
+        <img src="images/_DSC4015.JPG" alt="images" width="550" height="500" class="image-style">
+        <img src="images/_DSC0073.JPG" alt="images" width="450" height="300" class="image-style">
+        <img src="images/_DSC0070.JPG" alt="images" width="450" height="300" class="image-style">
+        <img src="images/_DSC0032.JPG" alt="images" width="450" height="400" class="image-style">
+    </div> 
 </body>
 </html>
