@@ -51,25 +51,37 @@ h2{
     float: right;
     width: 30%;
     line-height: 1.6;
-    font-size: medium;
+    font-size: small;
+}
 
+button {
+    background-color: #cd8d8d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background: transparent;
+}
 
-
-
+button:hover {
+    background-color: #555;
+    transform: scale(1, 1);
 }
 
 #bio-image{
-    float: left;
-    width: 200px;
-    height: 200px;
-    padding: 20px;
-    margin-right: auto;
-    margin-bottom: auto;
+
     border: 40px lightblue;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    align-items: center;
+    margin-left: 20px;
+
    }
 
 a {
-    color: hotpink;
+    color: rgb(234, 210, 222);
   }
 
 
@@ -77,4 +89,9 @@ a {
    body {
     background-color: blue;
    } 
+   #bio-image {
+        border-radius: 50%;
+   margin-bottom: 20px;
+   align-items: center;
+   margin-left: 20px;}
   }

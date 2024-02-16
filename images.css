@@ -1,10 +1,22 @@
 header {
     font-size: xx-large;
     text-align: center;
+    color: antiquewhite;
+    text-decoration: none;
 
 
 
 }
+
+.links {
+color:antiquewhite;
+}
+
+.links:hover {
+    color: whitesmoke;
+    cursor: pointer;  
+}
+
 
 .image-style {
     border: 2px solid grey;
@@ -21,7 +33,7 @@ header {
     }
 
     body {
-        background-color: black color:bisque
+        background-color: black color;
     }
 
     .image-style {
