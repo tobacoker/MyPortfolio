@@ -33,6 +33,7 @@ if (userResponse) {
 
 function runSequence() {
     greet();
+    displayMessage1();
     question();
     
 }
