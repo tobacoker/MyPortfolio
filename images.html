@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>photogallery</title>
     <link rel="icon" type="image/png" href="images/chaos.png">
-    <link rel="stylesheet" type="text/css" href="images.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
-        body {
+               body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -21,10 +21,9 @@
             color: #fff;
             padding: 20px 0;
         }
-a{
-    text-decoration: none;
-    
-}
+        a{
+            text-decoration: none;
+        }
         .links {
             text-align: center;
             margin-bottom: 20px;
@@ -40,7 +39,6 @@ a{
 
         button {
             color: rgb(162, 144, 144);
-            
             transition: 0.3s;
         }
 
@@ -61,10 +59,53 @@ a{
             border: 5px solid #fff;
             border-radius: 10px;
             transition: transform 0.3s;
+            cursor: pointer;
         }
 
         .image-style:hover {
             transform: scale(1.1);
+        }
+
+        /* Adjustments for modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 9999; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        /* Modal Content (Image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            max-width: 60%; /* Limiting the max width */
+            max-height: 80%; /* Adjust height as needed */
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -72,14 +113,49 @@ a{
     <header>Gallery</header><br>
     <div class="links">
         <button><header><a href="index.html">Home</a></header></button> 
-    
     </div>
     <div class="image-container">
-        <img src="./images/IMG_3652.jpeg" alt="images" width="350" height="400" class="image-style">
-        <img src="./images/image3.JPG" alt="images" width="400" height="350" class="image-style">
-        <img src="./images/Freedom.png" alt="images" width="480" height="360" class="image-style">
-        <img src="./images/chaos.png" alt="images" width="350" height="400" class="image-style">
-    
+        <img src="./images/IMG_3652.jpeg" alt="images" width="350" height="400" class="image-style" onclick="openModal('./images/IMG_3652.jpeg', 0)">
+        <img src="./images/image3.JPG" alt="images" width="400" height="350" class="image-style" onclick="openModal('./images/image3.JPG', 1)">
+        <img src="./images/Freedom.png" alt="images" width="480" height="360" class="image-style" onclick="openModal('./images/Freedom.png', 2)">
+        <img src="./images/chaos.png" alt="images" width="350" height="400" class="image-style" onclick="openModal('./images/chaos.png', 3)">
     </div> 
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+        <span class="next" onclick="plusSlides(1)">&#10095;</span>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+
+        function openModal(imageUrl, index) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imageUrl;
+            slideIndex = index;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var modalImg = document.getElementById("modalImg");
+            var images = document.getElementsByClassName("image-style");
+            if (n >= images.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = images.length - 1 }
+            modalImg.src = images[slideIndex].src;
+        }
+    </script>
 </body>
 </html>
