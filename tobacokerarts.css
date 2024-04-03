@@ -12,7 +12,6 @@ header {
     color: #fff; /* Bootstrap light text color */
     text-align: center;
     padding: 1rem;
-    position:static;
 }
 
 /* Navigation styles */
@@ -66,7 +65,7 @@ background-color: transparent;
 }
 
 /* Button styles */
-.btn, .btn-primary {
+.btn,{
     display: inline-block;
     padding: 0.5rem 1rem;
     margin: 0.5rem;
