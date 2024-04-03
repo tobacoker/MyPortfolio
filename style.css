@@ -17,12 +17,16 @@ align-items: center;
 }
 
 header { 
-    background-image:url('./images/chaos.png'), url(./images/chaos.png);
-    background-color: #333333;
+    background-image: url(./images/Freedom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
     color: #eee;
     text-align: center;
-    font-size: larger;
-
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
 }
 
 h1{
@@ -40,6 +44,10 @@ h2{
 
 }
 
+.projects {
+    display: table-column-group;
+}
+
 #main-bio{
     float: left;
     width: 70%;
@@ -50,15 +58,34 @@ h2{
 
 }
 
-#contact-info{
+#contact-info {
+    display: inline;
     float: right;
     width: 30%;
     line-height: 1.6;
     font-size: small;
-    background-image: url(./images/Freedom.png);
-    background-size:cover;
-    
+    background-image: url(./images/chaos.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+   
 }
+
+#contact-info ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#contact-info ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#contact-info ul li a {
+    text-decoration: none;
+    color: #fff; /* Change color as needed */
+}
+
 
 button {
     background-color: #cd8d8d;
