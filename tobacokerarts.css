@@ -12,6 +12,7 @@ header {
     color: #fff; /* Bootstrap light text color */
     text-align: center;
     padding: 1rem;
+    position:static;
 }
 
 /* Navigation styles */
