@@ -36,7 +36,17 @@ color: rgb(218, 205, 28);
 background-color: transparent;
 }
 
+.hero {
+    background-image: url('./images/Freedom.png');
+    background-size: width:350px; height:350px;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+}
 
+.hero .btn {
+    margin-top: 20px;
+}
 
 /* Container styles */
 .container {
